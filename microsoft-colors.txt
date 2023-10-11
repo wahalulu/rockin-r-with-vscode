@@ -1,0 +1,30 @@
+Orange #d83b01
+Yellow #ffb900
+Green #107c10
+Teal #008575
+Blue #0078d4
+Purple #8661c5
+
+Black #000000
+White #ffffff
+
+Dark Orange #6b2929
+Dark Yellow #5a4b16
+Dark Green #054b16
+Dark Teal #274b47
+Dark Blue #243a5e
+Dark Purple #3b2e58
+
+Light Orange #ff9349
+Light Yellow #fef000
+Light Green #9bf00b
+Light Teal #30e5d0
+Light Blue #50e6ff
+Light Purple #d59dff
+
+Extra Light Gray #f2f2f2
+Light Gray #e6e6e6
+Gray #d2d2d2
+Mid Gray #737373
+Dark Gray #505050
+Extra Dark Gray #2f2f2f
