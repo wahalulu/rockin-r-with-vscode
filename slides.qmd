@@ -32,9 +32,14 @@ format:
     smaller: true
 ---
 
+# I 
+
 ## Why
 
-This is some text
+- multiple languages {{< fa brands r-project >}}, {{< fa brands python >}}
+- remote compute w/o having to configure server
+- extensions
+- 
 
 ::: notes
 -   Most data professionals are typically not trained as developers/engineers but need to think like one
@@ -52,6 +57,8 @@ This is some text
 ::: notes
 thigs that frustrate
 :::
+
+## 
 
 
 ## Show of hands
