@@ -12,3 +12,4 @@
 *.amltmp
 
 /.quarto/
+/_site/
