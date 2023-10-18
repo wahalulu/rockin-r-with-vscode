@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "notes.html#why",
+    "href": "notes.html#why",
+    "title": "",
+    "section": "Why",
+    "text": "Why\n\nmultiple languages , \nremote compute w/o having to configure server\nextensions\n\n\n\n\nMost data professionals are typically not trained as developers/engineers but need to think like one\nThese ideas will make you a better programmer\nMany years coding R and Python\nAspiring to be a better programmer\nInteracting with large scale and distributed systems\nCrappy code in the wild"
+  },
+  {
+    "objectID": "notes.html#aargh",
+    "href": "notes.html#aargh",
+    "title": "",
+    "section": "Aargh",
+    "text": "Aargh\nThis is some text\n\nthigs that frustrate"
+  },
+  {
+    "objectID": "notes.html#show-of-hands",
+    "href": "notes.html#show-of-hands",
+    "title": "",
+    "section": "Show of hands",
+    "text": "Show of hands\n\nHave you ever written an R script to be run in a non-interactive way?\nDid it work the first time as planned?\nHave you ever scheduled an R script to run without human intervention?\nDo you have any R script running in production?"
+  },
+  {
+    "objectID": "notes.html#were-baaaack",
+    "href": "notes.html#were-baaaack",
+    "title": "",
+    "section": "We’re baaaack!",
+    "text": "We’re baaaack!"
+  },
+  {
+    "objectID": "notes.html#section-1",
+    "href": "notes.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "Sr. Cloud Solutions Architect, Microsoft\n\n6 mos as PM Azure Machine Learning\n\nAdjunct Professor, Georgetown Masters of Data Science and Analytics\nCo-Founder of DataCommunityDC\n\nDisclaimer: the opinions expressed in this talk are personal and not reflective of any organization I am affiliated with."
+  },
+  {
+    "objectID": "notes.html#references",
+    "href": "notes.html#references",
+    "title": "",
+    "section": "References",
+    "text": "References\n\nPlachta, Michal. Grokking Functional Programming, 1st ed, Manning, 2022\nhttps://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-technical-paper\nhttps://daroczig.github.io/talks/\nhttps://adv-r.hadley.nz/"
+  }
+]
