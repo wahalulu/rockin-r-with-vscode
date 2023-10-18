@@ -4,4 +4,9 @@
 .Ruserdata
 *.Rproj
 .DS_Store
-
+.ipynb_checkpoints/
+.amlignore
+.amlignore.amltmp
+.ipynb_aml_checkpoints/
+*.amlignore
+*.amltmp
