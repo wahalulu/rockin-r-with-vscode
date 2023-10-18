@@ -10,3 +10,5 @@
 .ipynb_aml_checkpoints/
 *.amlignore
 *.amltmp
+
+/.quarto/

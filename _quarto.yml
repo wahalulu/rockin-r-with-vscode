@@ -1,0 +1,33 @@
+project:
+  type: website
+
+resources: 
+  - img
+
+format:
+  revealjs:
+    logo: img/Microsoft-logo_rgb_c-wht.png
+    #theme: ['microsoft.scss']
+    toc: false
+    code-fold: false
+    code-overflow: scroll
+    code-copy: true
+    scrollable: true
+    pdf-separate-fragments: false
+    fig-align: center
+    fig-dpi: 300
+    fig-width: 8
+    fig-asp: 0.618
+    fig-cap-location: bottom
+    slide-level: 2
+    slide-number: c
+    margin: 0.1
+    view-distance: 3
+    link-external-newwindow: true
+    footer: "R Gov 2023"
+    smaller: true
+
+execute:
+  warning: false
+  message: false
+  freeze: auto 

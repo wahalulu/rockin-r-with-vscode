@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html#why",
+    "href": "index.html#why",
+    "title": "Rockin’  with VSCode",
+    "section": "Why",
+    "text": "Why\n\nmultiple languages , \nremote compute w/o having to configure server\nextensions\n\n\n\n\nMost data professionals are typically not trained as developers/engineers but need to think like one\nThese ideas will make you a better programmer\nMany years coding R and Python\nAspiring to be a better programmer\nInteracting with large scale and distributed systems\nCrappy code in the wild"
+  },
+  {
+    "objectID": "index.html#aargh",
+    "href": "index.html#aargh",
+    "title": "Rockin’  with VSCode",
+    "section": "Aargh",
+    "text": "Aargh\nThis is some text\n\nthigs that frustrate"
+  },
+  {
+    "objectID": "index.html#show-of-hands",
+    "href": "index.html#show-of-hands",
+    "title": "Rockin’  with VSCode",
+    "section": "Show of hands",
+    "text": "Show of hands\n\nHave you ever written an R script to be run in a non-interactive way?\nDid it work the first time as planned?\nHave you ever scheduled an R script to run without human intervention?\nDo you have any R script running in production?"
+  },
+  {
+    "objectID": "index.html#were-baaaack",
+    "href": "index.html#were-baaaack",
+    "title": "Rockin’  with VSCode",
+    "section": "We’re baaaack!",
+    "text": "We’re baaaack!"
+  },
+  {
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
+    "title": "Rockin’  with VSCode",
+    "section": "",
+    "text": "Sr. Cloud Solutions Architect, Microsoft\n\n6 mos as PM Azure Machine Learning\n\nAdjunct Professor, Georgetown Masters of Data Science and Analytics\nCo-Founder of DataCommunityDC\n\nDisclaimer: the opinions expressed in this talk are personal and not reflective of any organization I am affiliated with."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Rockin’  with VSCode",
+    "section": "References",
+    "text": "References\n\nPlachta, Michal. Grokking Functional Programming, 1st ed, Manning, 2022\nhttps://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-technical-paper\nhttps://daroczig.github.io/talks/\nhttps://adv-r.hadley.nz/"
+  }
+]
