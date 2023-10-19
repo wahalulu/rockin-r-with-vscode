@@ -15,9 +15,10 @@ $selection-bg: #737373;
   line-height: 1.3em;
 }
 
+// https://stackoverflow.com/questions/74083521/how-to-increase-size-logo-in-quarto-reveal-js-presentation
 .reveal .slide-logo {
   height: 100px !important;
-  width: 100px !important;
+//  width: 100px !important;
   max-width: unset !important;
   max-height: unset !important;
 }

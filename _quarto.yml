@@ -20,7 +20,7 @@ format:
     fig-asp: 0.618
     fig-cap-location: bottom
     slide-level: 2
-    slide-number: c
+    slide-number: c/t
     margin: 0.1
     view-distance: 3
     link-external-newwindow: true
