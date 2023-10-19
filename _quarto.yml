@@ -7,7 +7,7 @@ resources:
 format:
   revealjs:
     logo: img/Microsoft-logo_rgb_c-wht.png
-    #theme: ['microsoft.scss']
+    theme: ['microsoft.scss']
     toc: false
     code-fold: false
     code-overflow: scroll
