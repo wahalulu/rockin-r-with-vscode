@@ -7,13 +7,15 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Marck Vaisman">
-  <title>Rockin’  with VSCode</title>
+  <title>Rockin’ withVisual Studio Code (VSCode)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,6 +33,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -323,30 +390,378 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Rockin’ <i class="fa-brands fa-r-project" aria-label="r-project"></i> with <code>VSCode</code></h1>
+  <h1 class="title">Rockin’ <i class="fa-brands fa-r-project" aria-label="r-project"></i><br>with<br>Visual Studio Code (VSCode)</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
 Marck Vaisman 
 </div>
-        <p class="quarto-title-affiliation">
-            Microsoft
-          </p>
-    </div>
+</div>
 </div>
 
 </section>
-<section id="slide-creation-in-progress" class="title-slide slide level1 center">
-<h1>Slide creation in progress</h1>
+<section id="hi" class="slide level2">
+<h2>Hi!</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="https://media.giphy.com/media/pxwlYSM8PfY5y/giphy.gif"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>Sr.&nbsp;Cloud Solutions Architect | Technical Specialist | Data Scientist @ Microsoft
+<ul>
+<li>6 mos as PM Azure Machine Learning</li>
+</ul></li>
+<li>Professor, Georgetown Masters of Data Science and Analytics</li>
+<li>Co-Founder of DataCommunityDC</li>
+</ul>
+</div>
+</div>
+<p><strong>Disclaimer:</strong> the opinions expressed in this talk are personal and not reflective of any organization I am affiliated with.</p>
+</section>
+<section id="thank-you-ai" class="slide level2">
+<h2>Thank you, AI</h2>
+<aside class="notes">
+<ul>
+<li>not an AI talk, but I work with this every day</li>
+<li>It’s a great tool for certain tasks</li>
+<li>Given what’s been going on in the world, it’s been hard to concentrate</li>
+<li>Prompt: write a detailed outline with summary bullets for 20 slides for a presentation on using R with VSCode (also helps with ADD)</li>
+<li>Used Bing Chat Enterprise</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bing-chat-enterprise.png" height="500"></p>
+</figure>
+</div>
 
+<aside><div>
+<p>Bing Chat Enterprise Prompt: <code>write a detailed outline with summary bullets for 20 slides for a presentation on using R with VSCode</code></p>
+</div></aside></section>
+<section id="agenda-sorta" class="slide level2">
+<h2>Agenda, sorta…</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="img/talk1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="img/talk2.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="img/talk3.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="no-fighting" class="slide level2">
+<h2>No fighting!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/boxing.png" height="500"></p>
+</figure>
+</div>
 
-<img src="img/Microsoft-logo_rgb_c-wht.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<aside><div>
+<p>Image generated by DALL-E on Azure OpenAI. Prompt: <code>rocky balboa vs ivan drago</code> (except logos)</p>
+</div></aside></section>
+<section id="options-are-good" class="slide level2">
+<h2>Options are good!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/together.png" height="500"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Image generated by DALL-E on Azure OpenAI. Prompt: <code>a data scientist working on two separate computers</code> (except logos)</p>
+</div></aside></section>
+<section id="about-vscode" class="slide level2">
+<h2>About VSCode</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="img/vscode-sample.png"></p>
+</div><div class="column r-fit-text" style="width:60%;">
+<ul>
+<li>Source-code editor built on <a href="https://www.electronjs.org/docs/latest#:~:text=Electron%20is%20a%20framework%20for%20building%20desktop%20applications,and%20Linux%20%E2%80%94%20no%20native%20development%20experience%20required.">Electron framework</a></li>
+<li>Many language specific development utilities</li>
+<li>Cloud integration</li>
+<li>Most of VSCode’s source code is available on GitHub under the permissive MIT License.</li>
+<li>The binary releases by Microsoft are freeware and include proprietary code.</li>
+<li>A community distribution, called VSCodium, is maintained, which provides MIT licensed binaries.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="why-vscode" class="slide level2">
+<h2>Why VSCode</h2>
+<div>
+<ul>
+<li class="fragment">Multiple languages <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <i class="fa-brands fa-python" aria-label="python"></i>, <i class="fa-brands fa-js" aria-label="js"></i>, <i class="fa-brands fa-html5" aria-label="html5"></i>, etc.</li>
+<li class="fragment">Remote computing and don’t want to install a server based IDE</li>
+<li class="fragment">Git interation</li>
+<li class="fragment">Multiplexing in the terminal</li>
+<li class="fragment">You need additional functionality via extensions</li>
+</ul>
+</div>
+</section>
+<section id="what-do-you-need" class="slide level2">
+<h2>What do you need?</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Required</strong></p>
+<ul>
+<li>VSCode: <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R Extension for VSCode</a></li>
+<li>R: <a href="https://github.com/REditorSupport/languageserver"><code>languageserver</code></a> package (an imeplementation of the <a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a>)
+<ul>
+<li>code completion</li>
+<li>linting</li>
+<li>workspace viewer</li>
+<li>debugging</li>
+</ul></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Optional, but highly recommended</strong></p>
+<ul>
+<li>Python: <a href="https://github.com/randy3k/radian"><code>radian</code></a>, a “21st century R console” (radian is powered by (π)thon)</li>
+<li>R: <a href="https://github.com/nx10/httpgd"><code>httpgd</code></a> package</li>
+<li>R linters</li>
+<li>VSCode: <a href="https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger">R Debugger Extension</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If you use multiple <code>R</code> or <code>Python</code> environments, these packages need to be installed in the <em>base</em> environment.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="https://media.giphy.com/media/RlO3bvMJyz3L4vGKsx/giphy.gif"></p>
+<p>Need to:</p>
+<ul>
+<li>Create key-binding for assignment <code>&lt;-</code> <kbd>Alt-dash</kbd></li>
+<li>Create key-binding for pipe <code>|&gt;</code> <kbd>Ctrl-Shift-M</kbd></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p>You <i class="fa-solid fa-heart" aria-label="heart"></i> your RStudio keyboard shorcuts!</p>
+<table>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 56%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>RStudio <i class="fa-brands fa-apple" aria-label="apple"></i> , <i class="fa-brands fa-windows" aria-label="windows"></i></th>
+<th>VSCode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Run code line/block</td>
+<td><kbd>Cmd-Return</kbd> , <kbd>Ctrl+Enter</kbd></td>
+<td>Same</td>
+</tr>
+<tr class="even">
+<td>Insert assignment operator <code>&lt;-</code></td>
+<td><kbd>Option–</kbd> , <kbd>Alt–</kbd></td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Insert pipe operator <code>|&gt;</code></td>
+<td><kbd>Cmd-Shift-M</kbd> , <kbd>Ctrl-Shift-M</kbd></td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>Toggle comment</td>
+<td><kbd>Cmd-Shift-C</kbd> , <kbd>Ctrl-Shift-C</kbd></td>
+<td><kbd>Command-/</kbd> , <kbd>Ctrl-/</kbd></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-image="https://media.giphy.com/media/3o6fIT3mShNcekq676/giphy.gif">
+<h2></h2>
+</section>
+<section id="my-vscode-user-settings" class="slide level2">
+<h2>My VSCode User Settings</h2>
+<p>Press <kbd>F1</kbd> (all OS’s), <kbd>Command-Shift-P</kbd> (<i class="fa-brands fa-apple" aria-label="apple"></i>), or <kbd>Ctrl-Shift-P</kbd> (<i class="fa-brands fa-windows" aria-label="windows"></i>) to open the Command Palette, then select <code>Preferences: Open User Setting (JSON)</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="er">//</span> <span class="er">VSCode</span> <span class="er">Editor</span> <span class="er">Specific</span> <span class="er">Settings</span> <span class="er">//</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">"editor.fontSize"</span><span class="fu">:</span> <span class="dv">14</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">"editor.fontFamily"</span><span class="fu">:</span> <span class="st">"Fira Code"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">"terminal.integrated.fontSize"</span><span class="fu">:</span> <span class="dv">14</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">"terminal.integrated.fontFamily"</span><span class="fu">:</span> <span class="st">"Fira Code"</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="dt">"editor.fontLigatures"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="er">//</span> <span class="er">R</span> <span class="er">Specific</span> <span class="er">Settings</span> <span class="er">//</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="dt">"r.plot.useHttpgd"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="dt">"[r]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>        <span class="dt">"editor.formatOnType"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>        <span class="dt">"editor.formatOnSave"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="fu">},</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="dt">"r.sessionWatcher"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="dt">"r.rterm.option"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>        <span class="st">"--no-save"</span><span class="ot">,</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>        <span class="st">"--no-restore"</span><span class="ot">,</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>        <span class="st">"--no-restore-history"</span><span class="ot">,</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>        <span class="st">"--no-site-file"</span><span class="ot">,</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>        <span class="st">"--quiet"</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="er">//</span> <span class="er">If</span> <span class="er">using</span> <span class="er">radian</span><span class="fu">:</span> <span class="er">(not</span> <span class="er">recommended</span> <span class="er">for</span> <span class="er">remote</span> <span class="er">use)//</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="st">"r.bracketedPaste"</span><span class="er">:</span> <span class="kw">true</span><span class="fu">,</span> </span>
+<span id="cb1-24"><a href="#cb1-24"></a>    <span class="dt">"r.rterm.mac"</span><span class="fu">:</span> <span class="st">"/Users/marck/miniforge3/bin/radian"</span><span class="fu">,</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a> <span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<ul>
+<li><code>r.alwaysUseActiveTerminal</code> ensures that pressing Ctrl (Command) + Enter will always send to the active terminal rather than trying to create an R terminal if there is none.</li>
+<li><code>r.bracketedPaste</code> ensures the command chunk can be correctly sent to radian.</li>
+<li><code>r.sessionWatcher</code> enables R session watcher for better interactive functionality.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="my-vscode-keyboard-bindings" class="slide level2">
+<h2>My VSCode Keyboard Bindings</h2>
+<p>Press <kbd>F1</kbd> (all OS’s), <kbd>Shift-Command-P</kbd> (<i class="fa-brands fa-apple" aria-label="apple"></i>), or <kbd>Ctrl-Shift-P</kbd> (<i class="fa-brands fa-windows" aria-label="windows"></i>) to open the Command Palette, then select <code>Preferences: Open Keyboard Shortcus (JSON)</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource json number-lines code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1"></a><span class="ot">[</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="er">//</span> <span class="er">Editor</span> <span class="er">bindings</span> <span class="er">//</span>  </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">{</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"alt+-"</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId =~ /r|rmd|qmd/ &amp;&amp; editorTextFocus"</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>      <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    <span class="fu">}</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">{</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId =~ /r|rmd|qmd/ &amp;&amp; editorTextFocus"</span><span class="fu">,</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>      <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" |&gt; "</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>    <span class="fu">}</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>  <span class="er">//</span> <span class="er">Terminal</span> <span class="er">bindings</span> <span class="er">//</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">{</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" |&gt; "</span> <span class="fu">},</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>    <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>  <span class="fu">{</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"alt+-"</span><span class="fu">,</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>    <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span> <span class="fu">},</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>    <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="r-interactive-experience-on-remote-machines" class="slide level2">
+<h2>R interactive experience on remote machines</h2>
+<p>While you can create a connection to a remote server within VSCode using SSH, you need to do the following:</p>
+<ul>
+<li>Have <code>R</code> installed on remote machine</li>
+<li>Have <code>languageserver</code> and <code>httpgd</code> installed on remote machine (in base environment)</li>
+<li>Install the R Extension on the remote VSCode window</li>
+</ul>
+
+<aside><div>
+<p>Demo</p>
+</div></aside></section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Setting up VSCode for R</strong></p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/languages/r">R in VSCode docs</a></li>
+<li><a href="https://github.com/REditorSupport/vscode-R/wiki">The VSCode R Extension wiki</a></li>
+<li><a href="https://renkun.me/">Ken Run’s website</a> has several posts on using R with VSCode. He’s one of the developers of the developers of the VSCode extension and the <code>languageserver</code> package</li>
+<li><a href="https://stackoverflow.com/questions/71608612/how-to-add-keybindings-in-visual-studio-code-for-the-r-terminal">S/O question on adding keybindings</a></li>
+<li><a href="https://stackoverflow.com/questions/57395681/getting-visual-studio-code-to-auto-format-r-code">S/O question on getting VSCode to auto-format R code</a></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>Using VSCode and R with Azure Machine Learning</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=lIjSzG0puMs">Youtube video from SLC-RUG: Using R with Visual Studio Code and Azure Machine Learning (May, 2023)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZjsTg2v5aSQ">The AI Show Live - Using R with Azure Machine Learning (May, 2023)</a></li>
+<li><a href="https://github.com/wahalulu/using-r-with-azure-machine-learning">GitHub repo with the R/AzureML code</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/machine-learning/how-to-r-overview-r-capabilities">Microsoft Learn: Using R with AzureML docs</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="see-ya-next-year" class="slide level2">
+<h2>See ya’ next year!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dancing.gif" height="500"></p>
+</figure>
+</div>
+</section>
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank You!</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>marck.vaisman@microsoft.com</code><br> <a href="http://www.github.com/wahalulu"><i class="fa-brands fa-github" aria-label="github"></i> wahalulu</a></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/echo-false-1.png" width="2400"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://media.giphy.com/media/K3kR9EZj8Uwk8/giphy.gif"></p>
+</div>
+</div>
+
+<p><img src="img/Microsoft-logo_rgb_c-wht.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>R Gov 2023</p>
 </div>
 </section>
@@ -381,7 +796,7 @@ Marck Vaisman
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': true,
  
         // Display controls in the bottom right corner
@@ -399,10 +814,10 @@ Marck Vaisman
         controlsBackArrows: 'faded',
 
         // Display a presentation progress bar
-        progress: true,
+        progress: false,
 
         // Display the page number of the current slide
-        slideNumber: 'c',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -561,6 +976,44 @@ Marck Vaisman
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
