@@ -8,6 +8,7 @@ format:
   revealjs:
     logo: img/Microsoft-logo_rgb_c-wht.png
     theme: ['microsoft.scss']
+    smaller: true
     toc: false
     code-fold: false
     code-overflow: scroll
@@ -20,12 +21,13 @@ format:
     fig-asp: 0.618
     fig-cap-location: bottom
     slide-level: 2
-    slide-number: c/t
+    slide-number: false
     margin: 0.1
     view-distance: 3
     link-external-newwindow: true
+    progress: false
+    menu: false
     footer: "R Gov 2023"
-    smaller: true
 
 execute:
   warning: false
